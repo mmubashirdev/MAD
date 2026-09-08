@@ -17,3 +17,11 @@ android:layout_width
 android:layput_height
 style etc
 
+
+Phases for Mobile application development 
+
+design, structure (prototype), development 
+
+hybrid - wrapping project 
+
+cross platform - make code specific for Cross devices
