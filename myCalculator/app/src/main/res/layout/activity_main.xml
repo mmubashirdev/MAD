@@ -1,57 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?> <!-- Defines XML version and character encoding -->
 
+<!--
+LinearLayout arranges all child elements in a single line (stack).
+android:id -> Unique name for this layout to reference it in Java code.
+android:orientation -> "vertical" means children are stacked top-to-bottom.
+layout_width/height -> "match_parent" makes the layout fill the whole screen.
+android:padding -> Adds space inside the layout so content doesn't touch the edges.
+tools:context -> Specifies which Activity class this layout is associated with.
+-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/number1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter first number"
-        android:inputType="numberDecimal" />
-
-    <EditText
-        android:id="@+id/number2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter second number"
-        android:inputType="numberDecimal" />
-
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add" />
-
-    <Button
-        android:id="@+id/subtractButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Subtract" />
-
-    <Button
-        android:id="@+id/multiplyButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Multiply" />
-
-    <Button
-        android:id="@+id/divideButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Divide" />
-
+    <!-- TextView displays non-editable text — this is the screen title -->
     <TextView
-        android:id="@+id/result"
-        android:layout_width="match_parent"
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Result"
-        android:textSize="24sp"
-        android:padding="20dp" />
+        android:layout_marginTop="20dp"
+        android:text="@string/title_calculator"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_gravity="center"/> <!-- Centers the title horizontally -->
+
+    <!-- EditText #1: Input box for entering the first number -->
+    <!-- inputType="numberDecimal" restricts keyboard to numbers and a decimal point -->
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_value1"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        android:autofillHints="none" /> <!-- Disables autofill suggestions -->
+
+    <!-- EditText #2: Input box for entering the second number -->
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_value2"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        android:autofillHints="none" />
+
+    <!-- Button that triggers the SUM calculation when tapped -->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_sum"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <!-- TextView to display the final result — updated by Java code -->
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_result"
+        android:textSize="50sp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
