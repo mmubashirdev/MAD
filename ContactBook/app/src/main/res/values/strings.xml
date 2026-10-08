@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contact Book</string>
+    <string name="title_contact_book">Contact Book</string>
+    <string name="title_contact_details">Contact Details</string>
+    <string name="title_add_contact">Add Contact</string>
+    <string name="back">Back</string>
+    <string name="add_contact">Add contact</string>
+
+    <string name="hint_name">Name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_website">Website</string>
+    <string name="hint_address">Address</string>
+
+    <string name="label_phone">Phone</string>
+    <string name="label_email">Email</string>
+    <string name="label_website">Website</string>
+    <string name="label_address">Address</string>
+    <string name="empty_value">—</string>
+
+    <string name="btn_call">Call</string>
+    <string name="btn_email">Email</string>
+    <string name="btn_website">Website</string>
+    <string name="btn_map">Map</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <string name="error_name_required">Name is required</string>
+    <string name="error_phone_required">Phone is required</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+
+    <string name="email_subject">Hello %1$s</string>
+    <string name="share_chooser_title">Share contact via</string>
+
+    <string name="no_app_call">No app found to make a call</string>
+    <string name="no_app_email">No email app found</string>
+    <string name="no_app_browser">No browser found</string>
+    <string name="no_app_map">No map app found</string>
+    <string name="no_app_share">No app found to share with</string>
+    <string name="no_email_saved">No email saved for this contact</string>
+    <string name="no_website_saved">No website saved for this contact</string>
+    <string name="no_address_saved">No address saved for this contact</string>
+</resources>
